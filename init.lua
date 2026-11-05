@@ -1049,3 +1049,12 @@ end
 -- vim: ts=2 sts=2 sw=2 et
 --
 vim.pack.add { 'https://github.com/noir-lang/noir-nvim' }
+
+
+vim.pack.add { 'https://github.com/akinsho/bufferline.nvim' }
+require('bufferline').setup {
+  options = { diagnostics = 'nvim_lsp' },
+}
+vim.keymap.set('n', '<S-l>', '<cmd>BufferLineCycleNext<cr>', { desc = 'Buffer suivant' })
+vim.keymap.set('n', '<S-h>', '<cmd>BufferLineCyclePrev<cr>', { desc = 'Buffer précédent' })
+vim.keymap.set('n', '<leader>bp', '<cmd>BufferLinePick<cr>', { desc = '[B]uffer [P]ick' })
