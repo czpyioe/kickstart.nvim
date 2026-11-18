@@ -1058,3 +1058,10 @@ require('bufferline').setup {
 vim.keymap.set('n', '<S-l>', '<cmd>BufferLineCycleNext<cr>', { desc = 'Buffer suivant' })
 vim.keymap.set('n', '<S-h>', '<cmd>BufferLineCyclePrev<cr>', { desc = 'Buffer précédent' })
 vim.keymap.set('n', '<leader>bp', '<cmd>BufferLinePick<cr>', { desc = '[B]uffer [P]ick' })
+
+
+
+vim.pack.add({
+    'https://github.com/MeanderingProgrammer/render-markdown.nvim',
+})
+require('render-markdown').setup({}) -- only mandatory if you want to set custom options
